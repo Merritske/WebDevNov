@@ -1,0 +1,14 @@
+div {    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: blueviolet; 
+    color: white  ;}
+
+label { padding-bottom: 1cm ; padding-top: 2em; }
+input {width: 20cm; height: 1cm; margin-bottom: 1cm;}
+input::placeholder {color: rgb(76, 0, 255);}
+input:hover { display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: rgb(247, 126, 12); 
+    color: rgb(252, 10, 10);}

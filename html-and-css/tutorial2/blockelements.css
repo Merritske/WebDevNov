@@ -1,0 +1,21 @@
+span{ display:block}
+div{background-color: red; color: rgb(238, 253, 22);}
+.custom {background-color: green; color: white;}
+span.custom{background-color: aquamarine;color: blue;}
+
+.main {display: flex; 
+
+
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-evenly;
+    }
+.child {
+    background-color: darkslategrey; 
+    padding: 4em;
+margin:1px ;
+}
+
+#wrapper{ background-color:yellow ;}
+
+video{border-radius:1em}
