@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "WebDevNov",
+			"path": "..\\..\\..\\..\\.vscode\\WebDevNov"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "WebDevNov"
+	}
+}

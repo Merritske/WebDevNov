@@ -1,0 +1,49 @@
+body{
+    background-color: #A3B5C6;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+header>nav{
+    display:flex
+}
+.nav{
+    font-family: Arial, Helvetica, sans-serif;
+    Font-size: 24px;
+    color: black;
+    padding: 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #0601FF;
+    background-color: #0000FF;
+    border-radius: 5em;
+    margin: 1em;
+}
+.nav:hover{
+    border-width: 7px;
+    border-color: #020280;
+}
+main{
+    display: flex;
+}
+section{
+    width:70%;
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+}
+article{
+    padding: 10px;
+    margin: 1em;
+}
+.sidebar{
+   font-size: 25px;
+}
+li{
+    padding:5px;
+}
