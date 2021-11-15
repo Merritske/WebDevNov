@@ -39,7 +39,7 @@ header>nav{
     margin: 10px;
 }
 .nav:hover{
-    border-width: 7px;
+    border-width: 3px;
     border-color: #020280;
     color:white;
 }

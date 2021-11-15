@@ -1,0 +1,48 @@
+/*selectors*/
+
+*{
+    background-color: blue;
+/* select everything*/
+}
+body, html{
+    /*reset default spacing values*/
+    padding: 0;
+    margin: 0;
+}
+
+.row{
+    border:1px solid black;
+    padding: 1em;
+    background-color: limegreen;
+}
+#maincontainer{
+    border: 2px solid red;
+    border-bottom-width: 5px;
+    border-bottom-color: black;
+border-radius: 20px;
+    background-color: grey;
+    padding: 10px;
+}
+input{
+    background-color: black;
+    color: white;
+}
+input[name=username] {
+    /*select tagname by attribute name/valu */
+    background-color: mediumseagreen;
+    color: black;
+}
+li{
+    color: red;
+    list-style-type: none;
+}
+li[name=item]{
+    color: green;
+    list-style-type: circle;
+}
+
+.row > .col:nth-child(1){
+    background-color: maroon;
+    padding:3px;
+}
+

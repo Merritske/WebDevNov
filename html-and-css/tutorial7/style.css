@@ -1,0 +1,36 @@
+html, body{
+    padding:0;
+    margin:10px;
+}
+
+body{
+    background-color: rgb(58, 57, 57);
+}
+.btn{
+    padding:0.5em;
+    text-decoration: none;
+    color:white;
+    border-radius: 5px;
+}
+.btn:hover{
+padding:0.5em;
+color: blue;
+opacity: 0.5;
+}
+.btn-red{
+    background-color: red;
+   
+}
+.btn-yellow{
+    background-color: yellow;
+    color: black;
+
+}
+.btn-orange{
+    background-color: orange;
+    color: black
+}
+.content{
+    color:white;
+    display:none;
+}

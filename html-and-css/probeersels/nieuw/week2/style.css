@@ -1,0 +1,39 @@
+* {
+    padding:0;
+    margin:0;
+}
+header{
+    background-color: #F6C3E0;
+padding:1em;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+}
+li{
+    padding-left: 20px;
+    padding-right:20px;
+}
+main{
+    border-color: black;
+    border-width: 2px;
+    width:60%;
+    
+}
+.hello{
+   padding: 1em;
+    
+
+}
+.hello > p{
+    color: red;
+    margin:2px;
+    border-width: 10px;
+    border-color: black;
+    position: relative; top:20px; left:50px;
+
+}
