@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-image: url("https://live.staticflickr.com/3040/3031181785_f21d79fa5e_b.jpg");
+background-size: cover;
+}
+header{
+    text-align:center;
+    margin-top: 20px;
+}
+header>h1{
+    background-color: blue;
+    width:50%;
+    margin:auto;
+    border-radius: 50%;
+    padding: 30px;
+    padding-bottom:50px;
+    color:aqua
+
+}
+header>h2{
+    background-color: darkcyan;
+    width: 40%;
+    margin: auto;
+    border-radius: 50%;
+    position: absolute;
+    top:100px;
+    left:420px;
+    padding-bottom: 10px;
+    color:bisque
+}
+.card>img{
+    width:100px;
+    height: 100px;
+    float:left;
+    margin:1em;
+}
+.container{
+    
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+.card{
+    margin:2em;
+   background-color: beige;
+   flex:50%;
+   
+}
+
+.quotatiester{
+    display: flex;
+
+}
+
+.card>p{
+    
+    color:blue;
+    padding:1em;
+}
+.button{
+    background-color:rgb(226, 188, 17);
+    width: 30%;
+    padding:1em;
+    border-radius: 50%;
+    text-align: center;
+    margin:auto;
+    
+}
