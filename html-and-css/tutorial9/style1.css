@@ -40,9 +40,9 @@ left: 30% ;
     font-size:40px;
 }
 header>ul{
-position: absolute;
+position: relative;
 top:10px;
-flex-direction: row;
+
 list-style: none;
 }
 
@@ -53,8 +53,10 @@ width:50px;
 padding:1em;
 border-radius: 30%;
 text-align: center;
+display:inline;
 
 }
+
 .card>img{
     width:200px;
     height: 200px;
@@ -71,11 +73,12 @@ text-align: center;
 .card{
     margin:2em;
    background-color: beige;
-   flex:50%;
- 
-        
-   
-  
+   flex:50%; 
+}
+
+select{
+font-size:20px;
+width: 200px;
 }
 .card > h1{
     padding:10px;
