@@ -12,7 +12,8 @@ header{
   
 margin-top: 20px;
 
-  
+  overflow: auto;
+height:300px;
   
   
 }
@@ -42,7 +43,7 @@ left: 30% ;
 header>ul{
 position: relative;
 top:10px;
-
+float:right;
 list-style: none;
 }
 
@@ -53,8 +54,7 @@ width:50px;
 padding:1em;
 border-radius: 30%;
 text-align: center;
-display:inline;
-
+display: inline;
 }
 
 .card>img{
