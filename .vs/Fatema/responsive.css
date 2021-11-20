@@ -1,0 +1,27 @@
+@media screen and (max-width: 1000px)
+{
+    body{
+        /* background-color: saddlebrown; */
+
+
+    }
+    nav{
+        flex-direction: column;
+    }
+    .logo{
+        justify-content:center ;
+        margin: 12px 0;
+    }
+    ul{
+        justify-content: center;
+        height: 35px;
+    }
+    .search{
+        justify-content: center;
+        margin: 12px 15px;
+    }
+    slider{
+        height: 23vh;
+    }
+}
+
