@@ -1,0 +1,40 @@
+
+body{
+    margin:0;
+    padding:0;
+    position:absolute;
+  }
+    ul{
+    
+    list-style-type: none;
+    background-color: rgb(130 130 130);
+    width: 20%;
+    text-align: left;
+   border:5px solid black;
+    height:100%;
+    overflow:auto;
+    position: fixed;
+    margin-left:10px;
+  }
+  li{
+    padding: 20px;
+    display: block;
+    font-size:36px; 
+    margin:0;
+  }
+  li:hover{
+    background-color:rgb(100 100 100);
+      color: white;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+  }
+  li:active{
+background-color: rgb(20 180 80);
+  }
+  div h1{
+    font-size:54px;
+  }
+  p{
+    column-count:2;
+    font-size:30px;
+  }
