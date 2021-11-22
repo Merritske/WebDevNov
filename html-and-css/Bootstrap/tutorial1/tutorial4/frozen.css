@@ -1,0 +1,5 @@
+.rounded-pill:hover{
+background-color: rgb(120 120 120);
+color:#0dcaf0;
+cursor:pointer;
+}
