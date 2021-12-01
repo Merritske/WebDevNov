@@ -140,7 +140,7 @@ result = "computer" === "laptop" ? 'yes it is true' : 'It is not true' //false
 
 result = 1 === 1 ? (2 == 2 ? "ja" : "nee") : "false" //ja
 result = 1 === 1 ? (2 == 3 ? "ja" : "nee") : "false"  //nee
-result = isNaN(b) ? "it is not a number" : (userInput%2 ? "even" : "odd")
+/*result = isNaN(b) ? "it is not a number" : (userInput%2 ? "even" : "odd")*/
 
 
 //oefening
@@ -160,7 +160,7 @@ var student = {
 
     age: 17
 }
-console.log(student.name)
+//console.log(student.name)
 
 result = student.name != undefined ? (student.age >= 18 ? "he is allowed to drink alcohol" : "he is not allowed to drink alcohol") : "Student name does not exist" //student name does not exist
 
@@ -168,7 +168,7 @@ var student = {
     name: "Jack",
     age: 17
 }
-console.log(student.name)
+//console.log(student.name)
 
 result = student.name != undefined ? (student.age >= 18 ? "he is allowed to drink alcohol" : "he is not allowed to drink alcohol") : "Student name does not exist" //Jack, he is not allowed to drink
 
@@ -176,14 +176,19 @@ var student = {
     name: "Louis",
     age: 20
 }
-console.log(student.name)
+//console.log(student.name)
 
-result = student.name != undefined ? (student.age >= 18 ? "he is allowed to drink alcohol" : "he is not allowed to drink alcohol") : "Student name does not exist" //Louis, he is allowed to drink
-
-
+//result = student.name != undefined ? (student.age >= 18 ? "he is allowed to drink alcohol" : "he is not allowed to drink alcohol") : "Student name does not exist" //Louis, he is allowed to drink
 
 
-person = [{
+
+
+person = [
+    {age: 31,
+        adres: "Brussel",
+        taal:"Nl",
+    },
+    {
     name: "Louis",
     age: 20,
     adres: "Brussel",
@@ -201,11 +206,11 @@ person = [{
     adres: "Oostende",
     taal: "Fr"
 }]
-/*result = person[0].name != undefined ? (person[0].age <= 50 ? (person[0].adres = Oostende))*/
+result = person[1].name != undefined ? (person[1].age <= 50 ? (person[1].adres == "Oostende" ? "een visje eten" : "ketje") : "je bent te oud") : "what is your name?"
 //nog verder afwerken
-
+result = "a" > "A"
 console.log(result)
-
+/*
 //if else condition
 if (1 === 1) {
     console.log("hello world")
@@ -225,3 +230,4 @@ if (person[2].age >= 18 && person[2].age <= 30) {
 } else {
     console.log("old man")
 }
+*/
