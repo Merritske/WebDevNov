@@ -35,4 +35,57 @@ alert("I don't know you")
 }
 */
 
+/*
+for (let i = 2;i <= 10; i++){
+    if (i%2 !== 0) continue;
+        alert(i) 
+}
+*/
 
+/*
+let i = 0
+while (i < 3){
+    console.log(`number ${i} !`);
+    ++i
+}
+*/
+
+/*
+do{
+    x= prompt("give a number")
+}
+while(x < 100)
+*/
+
+/*
+let n = 10;
+prime: for(let i = 2; i<= 10; i++){
+for(let j = 2; j<i; j++ ){
+if(i%j == 0) continue prime;
+}console.log(i)
+}
+*/
+
+/*
+let browser = prompt("choose browser")
+if(browser == "edge"){
+    alert("you have got the Edge")
+}else if(browser == "chrome" || browser == "Firefox" || browser == "Safari" || browser == "opera"){
+    alert("ok, that is fine too")
+}else {
+    alert("we hope this page looks good")
+}
+*/
+/*
+let a = +prompt('a?', '')
+switch(a){
+    case 0: alert(0);
+    break;
+    case 1: alert(1);
+    break;
+    case 2:
+        case 3:
+            alert('2,3');
+            break;
+}
+*/
