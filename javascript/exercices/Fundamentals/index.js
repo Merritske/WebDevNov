@@ -89,3 +89,18 @@ switch(a){
             break;
 }
 */
+
+//lijst tonen in HTML
+const fruit =["banaan", "kiwi", "kers", "appel"];
+let fruitLengte = fruit.length;
+let text = "<ul>";
+for(let i = 0; i < fruitLengte; i++){
+    text += "<li>" + fruit[i] + "</li>";
+}
+text+= "</ul>"
+document.getElementById("demo").innerHTML = text
+//extra element toevoegen aan array -> wordt niet meer in lijst getoond
+function myFunction(){fruit.push("Lemon");
+document.getElementById("demo").innerHTML = fruit;}
+
+//
