@@ -91,7 +91,7 @@ switch(a){
 */
 
 //lijst tonen in HTML
-const fruit =["banaan", "kiwi", "kers", "appel"];
+/*const fruit =["banaan", "kiwi", "kers", "appel"];
 let fruitLengte = fruit.length;
 let text = "<ul>";
 for(let i = 0; i < fruitLengte; i++){
@@ -101,6 +101,63 @@ text+= "</ul>"
 document.getElementById("demo").innerHTML = text
 //extra element toevoegen aan array -> wordt niet meer in lijst getoond
 function myFunction(){fruit.push("Lemon");
-document.getElementById("demo").innerHTML = fruit;}
+;}
+*/
 
-//
+//Maand tonen ipv indexnummer
+/*
+const months = ["januari","februari","maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"]
+const d = new Date()
+let month = months[d.getMonth()]
+console.log(month) 
+*/
+/*
+//OEFENING
+function getRndInt(min,max){
+    return Math.floor(Math.random()*(max-min))+min
+}
+*/
+//oefening
+// let volw;
+// let age = (document.getElementById("age").innerHTML = function myFunction(age){
+// if(isNaN == age){
+//     return ("give a number")
+// }else{
+//     let volw >=18 ? "you can drink" : "you should be asleep"
+// }
+// } 
+function myFunction() {
+    let voteable;
+    let age = Number(document.getElementById("age").value);
+    if (isNaN(age)) {
+      voteable = "Input is not a number";
+    } else {
+      voteable = (age < 18) ? "Too young" : "Old enough";
+    }
+    document.getElementById("demo").innerHTML = voteable + " to vote";
+  }
+//oefening
+  let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
