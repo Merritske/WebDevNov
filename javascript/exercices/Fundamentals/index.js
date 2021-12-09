@@ -126,6 +126,7 @@ function getRndInt(min,max){
 //     let volw >=18 ? "you can drink" : "you should be asleep"
 // }
 // } 
+/*
 function myFunction() {
     let voteable;
     let age = Number(document.getElementById("age").value);
@@ -161,3 +162,37 @@ switch (new Date().getDay()) {
     day = "Saturday";
 }
 document.getElementById("demo").innerHTML = "Today is " + day;
+
+ let num1 = +prompt("give a number","")
+let num2 = +prompt("give a number","")
+let result = num1 +num2
+console.log(result)
+*/
+/*
+//exercice repeat till it's a number
+function readNumber(){
+  let num;
+  do{ 
+    num = +prompt("Give a number",0) 
+  } while (!isFinite(num));
+  if (num ===null || num === '')
+  return null;
+  return num
+
+}
+console.log(`read ${readNumber()}`)
+*/
+//random number from min to max (max niet inbegrepen)
+// function random(min, max){
+//  return min + Math.random()*(max-min) 
+// }
+// alert (random(1,5))
+//random integer number from min to max (max inbegrepen)
+function random(min,max){
+  return min + Math.random() * (max-min+1)
+}
+alert (Math.round(random(1,5)))
+
+
+
+
