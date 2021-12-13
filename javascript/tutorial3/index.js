@@ -1,4 +1,4 @@
-//comparison operators
+/*//comparison operators
 var result;
 
 // equal to operator ""=="" => bekijkt enkel de value
@@ -33,10 +33,10 @@ result = false === false //true
 result = true === false //false 
 
 //vb
-/*var isStudent = true
+var isStudent = true
 if(isStudent) {
     console.log("hello student")
-}*/
+}
 
 
 //not equal to "!="
@@ -73,14 +73,13 @@ result = 0 > 0 //false
 result = -10 > 10 //false
 
 //toepassing
-/*var studentAge = 40
+var studentAge = 40
 if(studentAge > 29){
     console.log("ok")
-}*/
+}
 
 
 //less than operator "<"
-
 result = 6 < 3 // false
 result = 2.5 < 3 //true
 result = true < false //false true = 1 false = 0
@@ -101,13 +100,13 @@ result = 9 <= "9" //true
 result = null <= null //true 
 
 
-/*//toepassingen
+///toepassingen
 var myArr = [1, 2, 3, 4, 5]
 var myArr1 = [1, 2, 3, 4, 5, 6]
 result = myArr.length <= myArr1.length //true
 //length tells how many items there are in an array
 var studentList = ["x", "y", "a", "z"]
-result = studentList.length */
+result = studentList.length //geeft het aantal studenten
 
 
 
@@ -140,27 +139,26 @@ result = "computer" === "laptop" ? 'yes it is true' : 'It is not true' //false
 
 result = 1 === 1 ? (2 == 2 ? "ja" : "nee") : "false" //ja
 result = 1 === 1 ? (2 == 3 ? "ja" : "nee") : "false"  //nee
-/*result = isNaN(b) ? "it is not a number" : (userInput%2 ? "even" : "odd")*/
+result = isNaN(b) ? "it is not a number" : (userInput%2 ? "even" : "odd")
 
 
 //oefening
-/*  his age is under 18 years
+  his age is under 18 years
 is this person allowed to drink alcohol
 if age is under 18 false = not allowed to drink
-if age is higher than 18 true = allowed to drink */
+if age is higher than 18 true = allowed to drink 
 
-/*var age = 17;
+var age = 17;
 result = age >= 18 ? "You are allowed to drink alcohol" : "you are not allowed to drink alcohol"
 var age = 41;
 result = age >= 18 ? "You are allowed to drink alcohol" : "you are not allowed to drink alcohol"
 const person =[{age:15},{age:10},{age:41}]
-result = person[2].age >= 18 ? "You are allowed to drink alcohol" : "you are not allowed to drink alcohol"*/
+result = person[2].age >= 18 ? "You are allowed to drink alcohol" : "you are not allowed to drink alcohol"
 
 var student = {
 
     age: 17
 }
-//console.log(student.name)
 
 result = student.name != undefined ? (student.age >= 18 ? "he is allowed to drink alcohol" : "he is not allowed to drink alcohol") : "Student name does not exist" //student name does not exist
 
@@ -168,7 +166,7 @@ var student = {
     name: "Jack",
     age: 17
 }
-//console.log(student.name)
+//console.log(student.name) = als test
 
 result = student.name != undefined ? (student.age >= 18 ? "he is allowed to drink alcohol" : "he is not allowed to drink alcohol") : "Student name does not exist" //Jack, he is not allowed to drink
 
@@ -180,7 +178,7 @@ var student = {
 
 //result = student.name != undefined ? (student.age >= 18 ? "he is allowed to drink alcohol" : "he is not allowed to drink alcohol") : "Student name does not exist" //Louis, he is allowed to drink
 
-
+*/
 
 
 person = [
@@ -206,10 +204,11 @@ person = [
     adres: "Oostende",
     taal: "Fr"
 }]
-result = person[1].name != undefined ? (person[1].age <= 50 ? (person[1].adres == "Oostende" ? "een visje eten" : "ketje") : "je bent te oud") : "what is your name?"
-//nog verder afwerken
-result = "a" > "A"
+result = person[2].name != undefined ? (person[2].age <= 50 ? (person[2].adres == "Oostende" ? "een visje eten" : "ketje") : "je bent te oud") : "what is your name?"
+
+//result = "a" > "A"
 console.log(result)
+
 /*
 //if else condition
 if (1 === 1) {

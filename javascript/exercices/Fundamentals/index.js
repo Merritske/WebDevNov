@@ -188,11 +188,42 @@ console.log(`read ${readNumber()}`)
 // }
 // alert (random(1,5))
 //random integer number from min to max (max inbegrepen)
-function random(min,max){
-  return min + Math.random() * (max-min+1)
+// function random(min,max){
+//   return min + Math.random() * (max-min+1)
+// }
+// alert (Math.round(random(1,5)))
+
+//FUN CALCULATION OF AGE born in 1980
+// let x = new Date()
+// let jaar = x.getFullYear().toString()
+// console.log(jaar)
+// let age = Number(jaar.charAt(0)) + Number(jaar.charAt(1)) + Number(jaar.charAt(2))
+// console.log(`Mijn leeftijd is: ${age}${jaar.charAt(3)}`)
+
+//REGULAR EXPRESSIONS RegEx objects
+//.test()
+let text = document.getElementById("p01").innerHTML;
+const pattern = /e/;
+document.getElementById("demo").innerHTML = pattern.test(text);
+//.exec()
+const obj = /e/.exec("The best things in life are free!");
+document.getElementById("demo").innerHTML =
+"Found " + obj[0] + " in position " + obj.index + " in the text: " + obj.input;
+
+//ERRORS => try - catch - throw
+function myFunction() {
+  const message = document.getElementById("p01");
+  message.innerHTML = "";
+  let x = document.getElementById("demo").value;
+  try { 
+    if(x == "")  throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 5)  throw "too low";
+    if(x > 10)   throw "too high";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
 }
-alert (Math.round(random(1,5)))
-
-
-
 

@@ -92,7 +92,7 @@ console.log(x)
 
 
 var a = 10; //10=10+10
-a=a+a //20
+a=a+a //20 a krijgt nieuwe value
 a=a*2 //20*2=40
 console.log("a result", a)
 
@@ -116,8 +116,9 @@ result= "5" + 5 //typeof string uitkomst 55
 result = 5+5; //number 
 result = 5 + "5" //string maar uitkomst zal 55 zijn
 
-result = 200.5 //decimal
-result= 2e5; 
+//result = 200.5 //decimal
+//result= 2e5; 
+
 
 
 //ARRAY
@@ -138,3 +139,4 @@ scores:[70,80,100]
 console.log("This is object", student)
 console.log(myDB);
 console.log("==>RESULT", typeof myDB)
+

@@ -7,5 +7,6 @@ document.write("<h1>hello js</h1>")
 document.write('<p>"hello world" love you, isn\'t it great</p>')
 document.writeln("<h1>hello hello</h1>")
 
-document.getElementById("title").innerHTML="Welcome"
+document.getElementById("title").innerHTML="Welcome" //verandert de tekst in html
+
 
