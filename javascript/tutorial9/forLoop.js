@@ -185,6 +185,8 @@ let users = [
             "bs": "e-enable strategic applications"
         }
     }]
+
+    //oplossing ATTILA
 // for(let i=0; i<users.length;i++){
 //     console.log(i)
 //     let obj = users[i]
@@ -195,14 +197,14 @@ let users = [
 //     address: ${obj.address.street}, ${obj.address.zipcode}`)
 // }
 
-
+//MIJN OPLOSSING
 //   for(let x = 0; x < users.length; x++){
 //       let obj = users[x]
 
 //       console.log(`${obj.name} /\n ${obj.email} /\n ${obj.address.street} ${obj.address.suite}  ${obj.address.city} ${obj.address.zipcode}`)
 //        console.log("-------------------------------") 
 //      }  
-
+let x = document.getElementById("input")
 function getUser(user) {
 
        for (let x = 0; x < users.length; x++) {
