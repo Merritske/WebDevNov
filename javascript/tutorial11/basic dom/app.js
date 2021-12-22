@@ -91,20 +91,7 @@
 
 // console.log(value)
 
-// //BLOKJE LATEN BEWEGEN
-// let squareel = document.querySelector(".square")
-// var getPropVal = squareel.computedStyleMap().get('left');
-// console.log(getPropVal)
 
-// document.querySelector("btn").addEventListener("click", function (e){
-//       e.preventDefault();  
-//       for(let i = 0 ; i<10000 ; i++){
-   
-//         setInterval(()=>{
-//             squareel.style.top = `${i}px`
-//         }, 1000)
-//  } })
-//     //NOG AFWERKEN
 
 
 let elGen = t=> document.createElement(t)
