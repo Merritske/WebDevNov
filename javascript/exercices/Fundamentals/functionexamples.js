@@ -241,82 +241,291 @@
 //   );
 // }
 // console.log(isEveryoneHere(users));
-const people = {
-  Alan: {
-    online: false
-  },
-  Jeff: {
-    online: true
-  },
-  Sarah: {
-    online: false
-  }
-}
-function countOnline(usersObj) {
-  let result = 0;
-  for (let user in usersObj) {
-    if (usersObj[user].online === true) {
-      result++;
-    }
-  }
-  return result;
-}
-console.log(countOnline(people))
+// const people = {
+//   Alan: {
+//     online: false
+//   },
+//   Jeff: {
+//     online: true
+//   },
+//   Sarah: {
+//     online: false
+//   }
+// }
+// function countOnline(usersObj) {
+//   let result = 0;
+//   for (let user in usersObj) {
+//     if (usersObj[user].online === true) {
+//       result++;
+//     }
+//   }
+//   return result;
+// }
+// console.log(countOnline(people))
+// //
+// //
+// //get the names of the object
+// let users = {
+//   Alan: {
+//     age: 27,
+//     online: false
+//   },
+//   Jeff: {
+//     age: 32,
+//     online: true
+//   },
+//   Sarah: {
+//     age: 48,
+//     online: false
+//   },
+//   Ryan: {
+//     age: 19,
+//     online: true
+//   }
+// };
+
+// function getArrayOfUsers(obj) {
+// return Object.keys(obj) //returns an array with strings representing each property in the object
+// }
+
+// console.log(getArrayOfUsers(users));
+// //
+// //
+// let user = {
+//   name: 'Kenneth',
+//   age: 28,
+//   data: {
+//     username: 'kennethCodesAllDay',
+//     joinDate: 'March 26, 2016',
+//     organization: 'freeCodeCamp',
+//     friends: [
+//       'Sam',
+//       'Kira',
+//       'Tomo'
+//     ],
+//     location: {
+//       city: 'San Francisco',
+//       state: 'CA',
+//       country: 'USA'
+//     }
+//   }
+// };
+
+// function addFriend(userObj, friend) {
+// userObj.data.friends.push(friend);//"pete" bij in "friends" zetten
+//   return userObj.data.friends;
+// }
+// console.log(addFriend(user, 'Pete')); 
+// //
+// //
+// //omkeren van string
+// function reverseString(str) {
+//   for (var reversedStr = "", i = str.length - 1; i >= 0; i--) {
+//     reversedStr += str[i];
+//   }
+//   return reversedStr;
+// }
+// reverseString("hello");
+// //ANDERE MOGELIJKHEID
+// function reverseString(str) {
+//   return str
+//     .split("")
+//     .reverse()
+//     .join("");
+// }
+// reverseString("hello");
+// //
+// //
+// //factorialize 5! = 1*2*3*4*5 =120
+// function factorialize(num) {
+//   let product = 1
+//   for(let n = 2; n<= num; n++){
+// product *= n
+//   }
+//   return product;
+// }
+// factorialize(5);
+// //
+// //
+// //find the longest word in a string
+// function findLongestWordLength(str) {
+//   let words = str.split(' '); //convert string to array
+//   let maxLength = 0;
+
+//   for (let i = 0; i < words.length; i++) {
+//     if (words[i].length > maxLength) {
+//       maxLength = words[i].length;
+//     }
+//   }
+//   return maxLength;
+// }
+// findLongestWordLength("The quick brown fox jumped over the lazy dog");
+// //
+// //
+// //Grootste getal in subarray vinden en in nieuwe array zetten
+// function largestOfFour(arr) {
+//   let results = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     let largestNumber = arr[i][0];
+//     for (let j = 1; j < arr[i].length; j++) {
+//       if (arr[i][j] > largestNumber) {
+//         largestNumber = arr[i][j];
+//       }
+//     }
+//     results[i] = largestNumber;
+//   }
+//   return results;
+// }
+// largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+// //
+// //
+// //om laatste deel te vergelijken
+// function confirmEnding(str, target) {
+//   return str.slice(-target.length) === target
+// }
+// confirmEnding("Bastian", "n");
+// //
+// //
+// //string herhalen
+// function repeatStringNumTimes(str, num) {
+//   let result = ""
+//   while(num>0){
+//   result += str;
+//   num --
+//   }
+//     return result;
+//   }
+//  console.log(repeatStringNumTimes("abc", 3));
+//   //
+//   //
+//   //verwijderen van inhoud van strings
+//   function truncateString(str, num) {
+//     // Clear out that junk in your trunk
+//     if (str.length > num) {
+//       return str.slice(0, num) + "...";
+//     } else {
+//       return str;
+//     }
+//   }
+//   truncateString("A-tisket a-tasket A green and yellow basket", 8);
+// //
+//
+//find element in array that passes a function
+// function findElement(arr, func) {
+//   let num = 0;
+//   for(let i = 0; i<arr.length; i++){
+//     if(func(arr[i])){
+//       return arr[i]
+//     }
+//   }
+//   return undefined;
+// }
+// findElement([1, 2, 3, 4], num => num % 2 === 0);
+// //
+// //
+// //oplossing 1 : alle eerste letters van het woord in de string naar hoofdletter zetten
+// String.prototype.replaceAt = function(index, character) {
+//   return (
+//     this.substr(0, index) + character + this.substr(index + character.length)
+//   );
+// };
+
+// function titleCase(str) {
+//   var newTitle = str.split(" ");
+//   var updatedTitle = [];
+//   for (var st in newTitle) {
+//     updatedTitle[st] = newTitle[st]
+//       .toLowerCase()
+//       .replaceAt(0, newTitle[st].charAt(0).toUpperCase());
+//   }
+//   return updatedTitle.join(" ");
+// }
+// titleCase("I'm a little tea pot");
+// //
+// //oplossing 2
+// function titleCase(str) {
+//   var convertToArray = str.toLowerCase().split(" ");
+//   var result = convertToArray.map(function(val) {
+//     return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+//   });
+//   return result.join(" ");
+// }
+// titleCase("I'm a little tea pot");
+
+// //oplossing 3
+// function titleCase(str) {
+//   return str.toLowerCase().replace(/(^|\s)\S/g, L => L.toUpperCase());
+// }
+// titleCase("I'm a little tea pot");
+// //
+// //
+// //twee arrays samenvoegen na een bepaalde [n] in arr2
+// function frankenSplice(arr1, arr2, n) {
+//   let arr = arr2.slice()
+//   arr.splice(n,0,...arr1)
+//   return arr;
+// }
+// frankenSplice([1, 2, 3], [4, 5, 6], 1);
+// //
+// //
+// //als waarde is false (= "", null, false, undefined, 0, NaN) niet in nieuwe array zetten
+// function bouncer(arr) {
+//   let newArray = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i]) newArray.push(arr[i]);
+//   }
+//   return newArray;
+// }
+// bouncer([7, "ate", "", false, 9]);
+// //
+// //
+// 2 strings vergelijken of de ene in de andere zit
+// function mutation(arr) {
+//  if(arr[0].includes(arr[1])){
+// return true
+//  } return false
+//   }
+//   console.log(mutation(["hello", "hey"]))
 //
 //
-//get the names of the object
-let users = {
-  Alan: {
-    age: 27,
-    online: false
-  },
-  Jeff: {
-    age: 32,
-    online: true
-  },
-  Sarah: {
-    age: 48,
-    online: false
-  },
-  Ryan: {
-    age: 19,
-    online: true
-  }
-};
+//array verdelen in array met subarrays
+// function chunkArrayInGroups(arr, size) {
+//   let newArr = []
+//   for (let i = 0; i <= arr.length - 1; i += size) {
+//     newArr.push(arr.slice(i, i + size))
+//   }
+//   return newArr;
+// }
+// console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
 
-function getArrayOfUsers(obj) {
-return Object.keys(obj) //returns an array with strings representing each property in the object
-}
-
-console.log(getArrayOfUsers(users));
+//
+//constructor
+// function Dog(name, color) {
+//   this.name = name; // =name is zelfde als parameter
+//   this.color = color; // = color is zelfde als parameter
+// 
+//   }
+ //Dog.prototype.numLegs = 4 //dan hoeft dit niet in elke nieuwe Dog opgeslagen te worden
+//   let terrier = new Dog("foke","black")
 //
 //
-let user = {
-  name: 'Kenneth',
-  age: 28,
-  data: {
-    username: 'kennethCodesAllDay',
-    joinDate: 'March 26, 2016',
-    organization: 'freeCodeCamp',
-    friends: [
-      'Sam',
-      'Kira',
-      'Tomo'
-    ],
-    location: {
-      city: 'San Francisco',
-      state: 'CA',
-      country: 'USA'
-    }
-  }
-};
+//twee object die niet gerelateerd zijn toch dezelfde property geven via een functie
+// let bird = {
+//   name: "Donald",
+//   numLegs: 2
+// };
 
-function addFriend(userObj, friend) {
-userObj.data.friends.push(friend);//"pete" bij in "friends" zetten
-  return userObj.data.friends;
-}
-console.log(addFriend(user, 'Pete')); 
+// let boat = {
+//   name: "Warrior",
+//   type: "race-boat"
+// };
 
-
-
-
+// let glideMixin = function(obj) {
+//   obj.glide = function() {
+//     console.log("Gliding!");
+//   };
+// };
+// glideMixin(bird);
+// glideMixin(boat);
+//
+//
