@@ -505,7 +505,7 @@
 //   this.color = color; // = color is zelfde als parameter
 // 
 //   }
- //Dog.prototype.numLegs = 4 //dan hoeft dit niet in elke nieuwe Dog opgeslagen te worden
+//Dog.prototype.numLegs = 4 //dan hoeft dit niet in elke nieuwe Dog opgeslagen te worden
 //   let terrier = new Dog("foke","black")
 //
 //
@@ -528,4 +528,451 @@
 // glideMixin(bird);
 // glideMixin(boat);
 //
+//Twee functies in een immediately invoked function expression steken
+// let funModule = (function (){
+//     return{
+//     isCuteMixin:function(obj) {
+//       obj.isCute = function() {
+//         return true;
+//       };
+//     },
+//     singMixin: function(obj) {
+//       obj.sing = function() {
+//         console.log("Singing to an awesome tune");
+//       };
+//     }
+//     }
+//     })() //invokes directly
+// //
+// //
+// // Function that returns a string representing a cup of green tea
+// const prepareGreenTea = () => 'greenTea';
+
+// // Function that returns a string representing a cup of black tea
+// const prepareBlackTea = () => 'blackTea';
+
+// /*
+// Given a function (representing the tea type) and number of cups needed, the
+// following function returns an array of strings (each representing a cup of
+// a specific type of tea).
+// */
+// const getTea = (prepareTea, numOfCups) => {
+//   const teaCups = [];
+
+//   for(let cups = 1; cups <= numOfCups; cups += 1) {
+//     const teaCup = prepareTea();
+//     teaCups.push(teaCup);
+//   }
+//   return teaCups;
+// };
+// const tea4GreenTeamFCC = getTea(prepareGreenTea,27);
+// const tea4BlackTeamFCC = getTea(prepareBlackTea, 13);
+
+// console.log(
+//   tea4GreenTeamFCC,
+//   tea4BlackTeamFCC
+// );
+
+
+
+// // tabs is an array of titles of each site open within the window
+// const Window = function(tabs) {
+//     this.tabs = tabs; // We keep a record of the array inside the object
+//   };
+
+//   // When you join two windows into one window
+//   Window.prototype.join = function(otherWindow) {
+//     this.tabs = this.tabs.concat(otherWindow.tabs);
+//     return this;
+//   };
+
+//   // When you open a new tab at the end
+//   Window.prototype.tabOpen = function(tab) {
+//     this.tabs.push('new tab'); // Let's open a new tab for now
+//     return this;
+//   };
+
+//   // When you close a tab
+//   Window.prototype.tabClose = function(index) {
+
+//     const tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
+//     const tabsAfterIndex = this.tabs.splice(1); // Get the tabs after the tab
+
+//     this.tabs = tabsBeforeIndex.concat(tabsAfterIndex); // Join them together
+
+//     return this;
+//    };
+
+//   // Let's create three browser windows
+//   const workWindow = new Window(['GMail', 'Inbox', 'Work mail', 'Docs', 'freeCodeCamp']); // Your mailbox, drive, and other work sites
+//   const socialWindow = new Window(['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium']); // Social sites
+//   const videoWindow = new Window(['Netflix', 'YouTube', 'Vimeo', 'Vine']); // Entertainment sites
+
+//   // Now perform the tab opening, closing, and other operations
+//   const finalTabs = socialWindow
+//     .tabOpen() // Open a new tab for cat memes
+//     .join(videoWindow.tabClose(2)) // Close third tab in video window, and join
+//     .join(workWindow.tabClose(1).tabOpen());
+//   console.log(finalTabs.tabs);
+
 //
+//
+// // The global variable
+// const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+// function add(arr, bookName) {
+//   let newArr = [...arr]; // Copy the bookList array to a new array.
+//   newArr.push(bookName); // Add bookName parameter to the end of the new array.
+//   return newArr; // Return the new array.
+// }
+
+// /* This function should remove a book from the list and return the list */
+// // New parameters should come before the bookName one
+
+// // Add your code below this line
+// function remove(arr, bookName) {
+//   let newArr = [...arr]; // Copy the bookList array to a new array.
+//   if (newArr.indexOf(bookName) >= 0) {
+//     // Check whether the bookName parameter is in new array.
+//     newArr.splice(newArr.indexOf(bookName), 1); // Remove the given paramater from the new array.
+//     return newArr; // Return the new array.
+//   }
+// }
+
+// const newBookList = add(bookList, 'A Brief History of Time');
+// const newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
+// const newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
+
+// console.log(bookList);
+
+//
+// // originele array heeft objecten met nog meer keys
+// //nieuwe array 'map' met enkel titel en rating
+// const ratings = watchList.map(item => ({
+//     title: item["Title"],
+//     rating: item["imdbRating"]
+//   }));
+//
+//
+//eerst nieuwe array via map daarna filter toepassen
+//    var filteredList = watchList
+//   .map(movie => {
+//     return {
+//       title: movie.Title,
+//       rating: movie.imdbRating
+//     };
+//   })
+//   .filter(movie => {
+//     // return true it will keep the item
+//     // return false it will reject the item
+//     return parseFloat(movie.rating) >= 8.0;
+//   });
+//
+//
+//Het gemiddelde ratingsgetal van de films van "Christopher Nolan" zoeken
+//  function getRating(watchList) {
+//   var count = 0;
+//    var averageRating = watchList.reduce((sum,movie) =>  {
+//      if (movie.Director == "Christopher Nolan") {
+//        count+=1;
+//        return sum + parseFloat(movie.imdbRating);
+//      }
+//      return sum;
+//    }, 0) / count;
+//    return averageRating;
+//  }
+//
+//
+//enkel de integer nummers in een nieuwe array zetten
+// const squareList = arr => {
+//       return arr.filter(num => num > 0 && num % parseInt(num) === 0)
+//            .map(num => Math.pow(num, 2));
+//  };
+//  const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+//  console.log(squaredIntegers);
+//
+//
+//sorteren op alfabetische volgorde
+// function alphabeticalOrder(arr) {
+//    return arr.sort(function(a,b){
+//      return a===b ? 0 : a>b? 1:-1
+//    })
+//  }
+//  alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+//
+//een nieuwe array zonder de bestaande te wijzigen
+// const globalArray = [5, 6, 3, 2, 9];
+// function nonMutatingSort(arr) {
+// return [].concat(arr).sort(function(a,b){
+//   return a-b
+// })
+// }
+// nonMutatingSort(globalArray);
+//
+//eerst array maken daarna string
+// function sentensify(str) {
+//  return str.split(/\W/).join(" ")
+//  }
+//  sentensify("May-the-force-be-with-you");
+//
+//
+//een tekst in een string veranderen zonder witspace en met - tussen de woorden
+// var globalTitle = "winter is coming"
+// function urlSlug(title) {
+//    return title
+//    .toLowerCase()
+//    .trim()
+//    .split(/\s+/)
+//    .join("-");
+// }
+// var winterComing = urlSlug(globalTitle)
+//ANDERE OPLOSSING
+//function spinalCase(str) {
+//     return str
+//     .split(/\s|_|(?=[A-Z])/)
+//     .join("-")
+//     .toLowerCase();
+// }
+// spinalCase('This Is Spinal Tap');
+// //
+// //
+// //de som van de 2 getallen en de getallen ertussenin
+// function sumAll(arr) {
+//    let sumBetween=0;
+//    for(let i = Math.min(...arr); i <= Math.max(...arr); i++){
+//      sumBetween +=i
+//    }
+//    return sumBetween;
+//  }
+//  sumAll([1, 4]);
+//
+//
+// //twee arrays vergelijken, de unieke elementen in een nieuwe array zetten
+// function diffArray(arr1, arr2) {
+//    const newArr = [];
+//      function onlyInFirst(first, second) {
+//      // Looping through an array to find elements that don't exist in another array
+//      for (var i = 0; i < first.length; i++) {
+//        if (second.indexOf(first[i]) === -1) {
+//          // Pushing the elements unique to first to newArr
+//          newArr.push(first[i]);
+//        }
+//      }
+//    }
+//    onlyInFirst(arr1, arr2);
+//    onlyInFirst(arr2, arr1);
+
+//    return newArr;
+//  }
+//  diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+//
+// //
+// //verwijderen van dubbels in de array, die bij in het object staan
+// var valsToRemove = Array.from(arguments).slice(1);
+// return arr.filter(function(val) {
+//   return !valsToRemove.includes(val);
+// });
+// destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+// //andere oplossing
+// function destroyer(arr) {
+//    let valsToRemove = Object.values(arguments).slice(1);
+
+//    for (let i = 0; i < arr.length; i++) {
+//      for (let j = 0; j < valsToRemove.length; j++) {
+//        if (arr[i] === valsToRemove[j]) {
+//          delete arr[i];
+//        }
+//      }
+//    }
+//    return arr.filter(item => item !== null);
+//  }
+//  destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+//
+// //het laatste argument van het object is de source om na te kijken of dit in de array voorkomt.
+// function whatIsInAName(collection, source) {
+//    var srcKeys = Object.keys(source);
+//    return collection.filter(function (obj) {
+//       return srcKeys.every(function (key) {
+//          return obj.hasOwnProperty(key) && obj[key] === source[key];
+//       });
+//    });
+// }
+// whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, 
+// { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+//
+//
+//regular expression
+// Pig Latin is a way of altering English Words. The rules are as follows:
+
+// - If a word begins with a consonant, take the first consonant or consonant cluster, move it to the end of the word, and add ay to it.
+
+// - If a word begins with a vowel, just add way at the end.
+
+// function translatePigLatin(str) {
+//     return str
+//       .replace(/^[aeiou]\w*/, "$&way")
+//       .replace(/(^[^aeiou]+)(\w*)/, "$2$1ay");
+//   }
+
+//   translatePigLatin("consonant");
+
+//
+//
+// //als "A" dan "T" en omgekeerd, als "C" dan "G" en omgekeerd in array zetten
+// function pairElement(str) {
+//     // Return each strand as an array of two elements, the original and the pair.
+//     var paired = [];
+  
+//     // Function to check with strand to pair.
+//     var search = function(char) {
+//       switch (char) {
+//         case "A":
+//           paired.push(["A", "T"]);
+//           break;
+//         case "T":
+//           paired.push(["T", "A"]);
+//           break;
+//         case "C":
+//           paired.push(["C", "G"]);
+//           break;
+//         case "G":
+//           paired.push(["G", "C"]);
+//           break;
+//       }
+//     };
+  
+//     // Loops through the input and pair.
+//     for (var i = 0; i < str.length; i++) {
+//       search(str[i]);
+//     }
+  
+//     return paired;
+//   }
+  
+//   pairElement("GCG");
+//
+//
+//de onevengetallen in de fibonaccirij optellen tot aan een gegeven getal
+// function sumFibs(num) {
+//     let prevNumber = 0;
+//     let currNumber = 1;
+//     let result = 0;
+//     while (currNumber <= num) {
+//       if (currNumber % 2 !== 0) {
+//         result += currNumber;
+//       }
+//       currNumber += prevNumber;
+//       prevNumber = currNumber - prevNumber;
+//     }
+//     return result;
+//   }
+//   sumFibs(4);
+//
+//
+//al de priemgetallen kleiner dan een gegeven getal optellen
+//mijn oplossing
+// function sumPrimes(num) {
+//     //check prime
+//       if(num < 2){
+//   return num
+//       };
+//       let result = 1
+//       for (var i = 2; i < num; i++) {
+//           if(num%i!=0){
+//   result += i
+//           }else{
+//               return false
+//           }
+//   }
+//     return result;
+//   }
+//hoe het echt moest
+//   function sumPrimes(num) {
+//     // Helper function to check primality
+//     function isPrime(num) {
+//       for (let i = 2; i <= Math.sqrt(num); i++) {
+//         if (num % i == 0)
+//           return false;
+//       }
+//       return true;
+//     } 
+//     // Check all numbers for primality
+//     let sum = 0;
+//     for (let i = 2; i <= num; i++) {
+//       if (isPrime(i))
+//         sum += i;
+//     }
+//     return sum;
+//   }
+//   //sumPrimes(10);
+//   console.log(sumPrimes(12))
+//
+//
+//
+// //grootste gemeen veelvoud van al de getallen die tussen twee getallen zitten
+// function smallestCommons(arr) {
+//     // Setup
+//     const [min, max] = arr.sort((a, b) => a - b);
+//     const numberDivisors = max - min + 1;
+//     // Largest possible value for SCM
+//     let upperBound = 1;
+//     for (let i = min; i <= max; i++) {
+//       upperBound *= i;
+//     }
+//     // Test all multiples of 'max'
+//     for (let multiple = max; multiple <= upperBound; multiple += max) {
+//       // Check if every value in range divides 'multiple'
+//       let divisorCount = 0;
+//       for (let i = min; i <= max; i++) {
+//         // Count divisors
+//         if (multiple % i === 0) {
+//           divisorCount += 1;
+//         }
+//       }
+//       if (divisorCount === numberDivisors) {
+//         return multiple;
+//       }
+//     }
+//   } 
+//   smallestCommons([1, 5]);
+
+
+
+//als aan een bepaalde voorwaarde is voldaan mag de rest van de array blijven anders wordt de array onderdelen gedelete 
+
+// function dropElements(arr, func) {
+//     while (arr.length > 0 && !func(arr[0])) {
+//       arr.shift();
+//     }
+//     return arr;
+  
+//   }
+  
+//   dropElements([1, 2, 3], function(n) {return n < 3; });
+
+
+
+//
+// function truthCheck(collection, pre) {
+//     // Is everyone being true?
+//     return collection.every(obj => obj[pre]);
+//   }
+//   truthCheck([{"user": "Tinky-Winky", "sex": "male"}, 
+//   {"user": "Dipsy", "sex": "male"}, 
+//   {"user": "Laa-Laa", "sex": "female"}, 
+//   {"user": "Po", "sex": "female"}], "sex");
+
+
+
+//2getallen optellen nakijken of ze een nummer zijn anders een functie returnen
+// function addTogether() {
+//     const [first, second] = arguments;
+//     if (typeof(first) !== "number")
+//       return undefined;
+//     if (second === undefined)
+//       return (second) => addTogether(first, second);
+//     if (typeof(second) !== "number")
+//       return undefined;
+//     return first + second;
+//   }
+//   addTogether(2,3);
