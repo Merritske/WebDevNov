@@ -1,0 +1,214 @@
+ html{
+    margin:0;
+    padding: 0;
+    background-image: url("foto's/20201010_135931.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+
+}  
+body{
+       margin-left: 200px;
+    margin-right: 200px;
+}
+.welkom{
+    color: red;
+   
+}
+.menu{
+  
+    margin-left: 150px;
+ display:flex;
+ flex-wrap: wrap;
+    padding: 10px;
+    margin:20px;
+}
+.menu>a{
+    padding:10px;
+    color: green;
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+  
+    display:flex;
+    flex-wrap: wrap;
+}
+#sidebar{
+    float: right;
+    border-style: dashed;
+    border-color: #ff6600;
+}
+.card{
+    border-style: solid;
+    border-width: 3px;
+border-color: grey;
+width: 500px;
+height: 600px;
+margin:20px;
+margin-left: auto;
+margin-right:auto;
+
+
+}
+.fotoGrootteVert{
+    height: 500px;
+    width: 500px;
+     overflow:hidden; 
+margin-left: auto;
+margin-right: auto;
+
+}
+.fotoGrootteHor{
+    height: 500px;
+    width: 500px;
+     overflow:hidden; 
+margin-left: auto;
+margin-right: auto;
+   
+}
+.fotoGrootteHor>img{
+    width: 650px;
+    height: 500px;
+ object-fit: cover;
+object-position: 850% 10%;
+
+}
+.fotoGrootteVert>img{
+    width: 500px;
+    height: 650px;
+object-fit: cover;
+object-position: 50% 60%;
+
+}
+.hamMenu{
+    display:none;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px){
+    body{
+        margin:10px;
+        padding: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+     
+       
+    }
+
+.welkom{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+    .dropdown{
+  overflow: hidden;
+  background-color: blue;
+  position: relative;
+  
+    }
+    .navbar{
+         display: inline-flex;
+  justify-content: space-between; 
+  width: 100%;
+    }
+    .hamMenu {
+       
+        display: block;
+
+    margin: 10px;
+    height:50px; 
+    width:50px; 
+    border: 7px; 
+    border-style: solid; 
+    border-color: black; 
+    border-radius: 10px;
+
+}
+.hamMenu:hover, .hamMenu:focus{
+   box-shadow: 0px 0px 10px 5px  rgba(0,0,0,0.5);
+
+}
+.hamMenu>svg {
+   position:absolute;
+   padding: 1px;
+
+}
+
+.menu{
+float: right;
+display: none;
+/* display: none;
+position: absolute;
+min-width: 160px;
+z-index: 1; */
+}
+.menu>a{
+    display: block; 
+  position: relative;  
+    width: 100px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+
+    text-decoration: none;
+
+    padding: 12px 16px;
+    color: black;
+}
+.menu>a:hover{
+    background-color: cornflowerblue;
+}
+
+.show{display: block;}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#sidebar{
+   
+    border-style: dashed;
+    border-color: #ff6600;
+    height: 500px;
+}
+#sidebar>img{
+    height: 350px;
+    width: 300px;
+}
+.card{
+    border-style: solid;
+    border-width: 3px;
+border-color: grey;
+width: 300px;
+height:450px;
+margin: 2px;
+
+
+}
+.fotoGrootteHor{
+    height: 400px;
+    width: 300px;
+     overflow:hidden; 
+margin-left: auto;
+margin-right: auto;
+}
+.fotoGrootteHor>img{
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    object-position: 500%;
+ 
+}
+.fotoGrootteVert{
+    height: 400px;
+    width: 300px;
+     overflow:hidden; 
+margin-left: auto;
+margin-right: auto;
+}
+.fotoGrootteVert>img{
+    width: 100%;
+    height: auto;
+ 
+}
+}

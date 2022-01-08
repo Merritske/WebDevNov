@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oefening</title>
+    <style>
+        body {
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 40px;
+            list-style-type: none;
+            display: flex;
+
+        }
+
+        ul>li {
+            border-style: solid;
+            border-width: 5px;
+            border-color: rgb(80, 80, 200);
+            border-radius: 10px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        ol {
+            list-style-type: square;
+            list-style-position: inside;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 40px;
+        }
+
+        .menu {
+            display: inline-flex;
+            padding: 10px;
+        }
+
+        .menu>a {
+            padding-right: 20px;
+        }
+
+        .foto {
+            width: 250px;
+            height: 400px;
+            overflow: hidden;
+            border: solid 3px grey;
+        }
+
+        .foto>img {
+            width: 300px;
+            height: 450px;
+            object-fit: cover;
+            object-position: 50% 100%;
+        }
+
+        /* toggle */
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #2980B9;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd
+        }
+
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {
+            display: block;
+        }
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 34px;
+        }
+
+        input {
+            height: 50px;
+            width: 50%;
+            font-size: 32px;
+            color: cadetblue;
+        }
+
+        #submit {
+            height: 50px;
+            width: 300px;
+            background-color: chartreuse;
+            font-size: large;
+            margin: 20px;
+        }
+
+        table {
+            border-style: solid;
+            border-width: 2px;
+            width: 100%;
+
+        }
+
+        th {
+            background-color: #666666;
+            text-align: center;
+        }
+
+        th,
+        td {
+            height: 40px;
+
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+            text-align: end;
+        }
+
+        td>button {
+            height: 35px;
+            width: 80%;
+
+            background-color: red;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+
+        .lijst {
+            font-size: 32px;
+        }
+
+        #plus,
+        #min,
+        #reset {
+            width: 150px;
+            height: 50px;
+            background-color: red;
+            font-size: 35px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <h1>Vis en Vos</h1>
+
+        <div class="hamMenu">
+            <svg width="40" height="50">
+                <g fill="none" stroke="black">
+                    <path stroke-width="4" stroke-linecap="round" d="M5 10 l215 0" />
+                    <path stroke-width="4" stroke-linecap="round" d="M5 25 l215 0" />
+                    <path stroke-width="4" stroke-linecap="round" d="M5 40 l215 0" />
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    </div>
+
+
+
+    <div class="menu">
+        <a href="index1.html">
+            <h1>Home</h1>
+        </a>
+        <a href="contact.html">
+            <h1>Contact</h1>
+        </a>
+        <a href="project.html">
+            <h1>Projects</h1>
+        </a>
+        <a href="index.html">
+            <h1>Home</h1>
+        </a>
+
+    </div>
+    <div class="dropdown">
+        <ul>
+            <li onclick="myFunction()" class="dropbtn">
+                hallo</li>
+            <li>wie</li>
+            <li>wat</li>
+            <li>waar</li>
+        </ul>
+
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#"> stap 1</a>
+            <a href="#"> stap 2</a>
+            <a href="#"> stap 3</a>
+        </div>
+    </div>
+
+    <div class="foto">
+        <img src="foto's/kaderBloemBruss.jpg">
+    </div>
+
+    <fieldset>
+        <legend>
+            Inputformulier
+        </legend>
+
+        <label for="fname">First Name</label>
+        <input type="text" placeholder="name" id="fname" name="fname">
+        <label for="email">Email</label>
+        <input type="email" placeholder="email" id="email" name="email">
+        <button type="submit" id="submit">Submit</button>
+    </fieldset>
+    <div class="lijst">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>email</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+            <th>1</th>
+            <td>An</td>
+            <td>koko@poepoe.com</td>
+            <td><button type="button">Delete</button></td>
+        </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <div class="btnGroup">
+        <button type="button" id="plus"> + </button>
+        <button type="button" id="min"> - </button>
+        <button type="button" id="reset"> RESET </button>
+    </div>
+    <div class="result" style="width:100px; height: 50px; font-size: 35px">
+        <p>result:</p>
+   <h2 id="result">0</h2>
+    </div>
+
+    <script src="oef.js"></script>
+</body>
+
+</html>
