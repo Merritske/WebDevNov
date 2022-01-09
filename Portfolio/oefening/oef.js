@@ -17,6 +17,16 @@ function myFunction() {
       }
     }
   }
+//hamburgermenu dropdown
+function dropFun(){
+  let menuDrop = document.querySelector(".menu")
+  if(menuDrop.style.display === "inline-flex"){
+    menuDrop.style.display = "none"
+  }else{
+    menuDrop.style.display = "inline-flex"
+  }
+}
+//menu sluiten doet het niet als je buiten de div drukt wel als je op hamMEnu drukt
 
 
 //inputformulier naar localstorage opslaan nog doen
@@ -44,14 +54,30 @@ tableBody.innerHTML += `<tr>
 <td><button type="button" onclick="functionDel(this)">Delete</button></td>
 </tr>
 `
+localStorage.setItem("list", JSON.stringify(list))
 fname.value =""
 email.value=""
 })
-
+window.addEventListener("DOMContentLoaded", (e)=>{
+var storeData =JSON.parse(localStorage.getItem("list"))
+storeData.forEach(inputData=>{
+  count ++;
+  tableBody.innerHTML += `<tr>
+  <th class="thBody">${count}</th>
+  <td>${inputData.fname}</td>
+  <td>${inputData.email}</td>
+  <td><button type="button" onclick="functionDel(this)">Delete</button></td>
+  </tr>
+  `
+  list = storeData
+})
+})
 //nummers worden aangepast als een rij gedelete wordt
 function functionDel(getEl){
 //delete rij
   getEl.parentElement.parentElement.remove()
+ 
+
   count--
 num =[]
 //nummer volgorde wordt aangepast
@@ -62,10 +88,20 @@ for(let x=1; x<num.length; x++){
 document.querySelector(`body > div.lijst > table > tbody > tr:nth-child(${i}) > th`).innerHTML = x
 
 }
-console.log(num)
+// console.log(num)
 
-}
-  
+} 
+
+//NOG NIET IN ORDE om indexnummer te vinden en de lijst in de lovcalstorage aan te passen
+let firstN = getEl.parentElement.previousSibling.innertext
+console.log(firstN)
+//delete rij uit localstorage
+// let getElIndex = list.indexOf("a")
+// console.log(getElIndex)
+// let delRowLocal = list.slice(delRow=>{
+//   return delRow
+// }) 
+
 }
 
 //functie schrijven + - en reset

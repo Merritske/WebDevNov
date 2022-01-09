@@ -12,6 +12,21 @@
             margin-right: 200px;
             margin-top: 10px;
             margin-bottom: 10px;
+            background-color: #999999;
+        }
+
+        .hamMenu {
+            border: solid 5px black;
+            border-radius: 15px;
+            width: 100%;
+        }
+.bigHam{ 
+   
+    width: 80px;
+}
+        .hamMenu>svg {
+            padding-left: 2px;
+            padding-top: 2px;
         }
 
         ul {
@@ -42,12 +57,15 @@
         }
 
         .menu {
-            display: inline-flex;
+            display: none;
             padding: 10px;
+           
         }
 
         .menu>a {
-            padding-right: 20px;
+            padding-right: 50px;
+       
+         z-index: 1;
         }
 
         .foto {
@@ -192,36 +210,39 @@
     <div>
         <h1>Vis en Vos</h1>
 
-        <div class="hamMenu">
+        <div class="bigHam">
+            <button class="hamMenu" onclick="dropFun()">
             <svg width="40" height="50">
                 <g fill="none" stroke="black">
                     <path stroke-width="4" stroke-linecap="round" d="M5 10 l215 0" />
                     <path stroke-width="4" stroke-linecap="round" d="M5 25 l215 0" />
                     <path stroke-width="4" stroke-linecap="round" d="M5 40 l215 0" />
                 </g>
-            </svg>
+            </svg></button>
+       
+        <div class="menu">
+            <a href="index1.html">
+                <h1>Home</h1>
+            </a>
+            <a href="contact.html">
+                <h1>Contact</h1>
+            </a>
+            <a href="project.html">
+                <h1>Projects</h1>
+            </a>
+            <a href="index.html">
+                <h1>Home</h1>
+            </a>
+
         </div>
+     </div>
     </div>
 
-    </div>
+  
 
 
 
-    <div class="menu">
-        <a href="index1.html">
-            <h1>Home</h1>
-        </a>
-        <a href="contact.html">
-            <h1>Contact</h1>
-        </a>
-        <a href="project.html">
-            <h1>Projects</h1>
-        </a>
-        <a href="index.html">
-            <h1>Home</h1>
-        </a>
 
-    </div>
     <div class="dropdown">
         <ul>
             <li onclick="myFunction()" class="dropbtn">
@@ -280,7 +301,7 @@
     </div>
     <div class="result" style="width:100px; height: 50px; font-size: 35px">
         <p>result:</p>
-   <h2 id="result">0</h2>
+        <h2 id="result">0</h2>
     </div>
 
     <script src="oef.js"></script>
