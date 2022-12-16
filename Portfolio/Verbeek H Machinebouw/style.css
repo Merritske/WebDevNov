@@ -62,7 +62,6 @@
     }
     .image-galery{
         display: flex;
-  
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
@@ -71,6 +70,7 @@
     margin-left: 200px;
     margin-right: 200px;
     }
+  
     .card-item > h3{
         font-size: 24px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -107,7 +107,7 @@
         border-style: solid;
            border-width: 5px;
         border-color: var(--vColor);
-       width: 500px;
+       /* width: 500px; */
         height: 650px;
         overflow: hidden
     }
